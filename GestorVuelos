@@ -1,1 +1,39 @@
-    
+import com.sun.source.tree.Tree;
+
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class GestionVuelos {
+
+    TreeSet<Vuelo> vuelos;
+
+    public GestionVuelos() {
+        this.vuelos = new TreeSet<>();
+    }
+
+    public Vuelo buscarVuelo() {
+
+        Vuelo vuelo = null;
+        Double idVuelo;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("ID del vuelo: ");
+        idVuelo = scanner.nextDouble();
+
+        for (Vuelo vuelo1 : vuelos) {
+
+            if(vuelo1.getId() == idVuelo){
+
+                vuelo = vuelo1;
+                break;
+            }
+        }
+
+        return vuelo;
+    }
+
+
+
+
+}
