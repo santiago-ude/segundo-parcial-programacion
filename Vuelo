@@ -1,0 +1,63 @@
+import java.time.*;
+
+
+public class Vuelo {
+
+    private final Double id;
+    private double autoid = 1;
+    private String destino; //(pais/ciudad)
+    private LocalDate horario;
+    private String estado; //enum(programado, retrasado, cancelado, despegado)
+    private String tipoVuelo; // enum(internacional, nacional)
+
+
+    public Vuelo(String destino, LocalDate horario, String estado, String tipoVuelo) {
+        this.destino = destino;
+        this.horario = horario;
+        this.estado = estado;
+        this.tipoVuelo = tipoVuelo;
+        this.id = autoid;
+        autoid++;
+    }
+
+    public String getDestino() {
+        return destino;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
+
+    public LocalDate getHorario() {
+        return horario;
+    }
+
+    public void setHorario(LocalDate horario) {
+        this.horario = horario;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getTipoVuelo() {
+        return tipoVuelo;
+    }
+
+    public void setTipoVuelo(String tipoVuelo) {
+        this.tipoVuelo = tipoVuelo;
+    }
+
+    public Double getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("ID: %d || Destino: %s || Horario: " + this.horario + " || Estado: %s || Tipo vuelo: %s\n", this.id,this.destino,this.horario,this.estado,this.tipoVuelo);
+    }
+}
