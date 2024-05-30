@@ -1,1 +1,48 @@
+import java.util.Objects;
 
+public class Pasajero {
+
+    private String nombreCompleto;
+    private double nroPasaporte;
+
+    public Pasajero(String nombreCompleto, double nroPasaporte) {
+        this.nombreCompleto = nombreCompleto;
+        this.nroPasaporte = nroPasaporte;
+    }
+
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public double getNroPasaporte() {
+        return nroPasaporte;
+    }
+
+    public void setNroPasaporte(double nroPasaporte) {
+        this.nroPasaporte = nroPasaporte;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pasajero pasajero = (Pasajero) o;
+        return Double.compare(nroPasaporte, pasajero.nroPasaporte) == 0 && Objects.equals(nombreCompleto, pasajero.nombreCompleto);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombreCompleto, nroPasaporte);
+    }
+
+
+    @Override
+    public String toString() {
+        return String.format("Nombre completo: %s || numero pasaporte: %d", this.nombreCompleto, this.nroPasaporte);
+    }
+}
