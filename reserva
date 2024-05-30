@@ -1,1 +1,52 @@
+public class Reserva {
 
+    private final Double id;
+    private double autoid = 1;
+
+    private Pasajero pasajero;
+    private Vuelo vuelo;
+    private String claseAsiento; // enum(economica, negocios, primera)
+
+
+    public Reserva(Pasajero pasajero, Vuelo vuelo, String claseAsiento) {
+
+        this.pasajero = pasajero;
+        this.vuelo = vuelo;
+        this.claseAsiento = claseAsiento;
+        this.id = autoid;
+        autoid++;
+    }
+
+    public Pasajero getPasajero() {
+        return pasajero;
+    }
+
+    public void setPasajero(Pasajero pasajero) {
+        this.pasajero = pasajero;
+    }
+
+    public Vuelo getVuelo() {
+        return vuelo;
+    }
+
+    public void setVuelo(Vuelo vuelo) {
+        this.vuelo = vuelo;
+    }
+
+    public String getClaseAsiento() {
+        return claseAsiento;
+    }
+
+    public void setClaseAsiento(String claseAsiento) {
+        this.claseAsiento = claseAsiento;
+    }
+
+    public Double getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("ID Reserva: %d || Clase: %s\nPASAJERO: %s\nVUELO:%s",this.id,this.claseAsiento,this.pasajero.toString(),this.vuelo.toString());
+    }
+}
