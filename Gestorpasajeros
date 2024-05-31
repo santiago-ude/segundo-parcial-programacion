@@ -1,6 +1,9 @@
 import java.util.Scanner;
 import java.util.TreeSet;
 
+
+//CREAR,BUSCAR Y ELIMINAR PASAJEROS x nombre y nro de pasaporte
+
 public class gestionPasajeros{
 
       TreeSet<Pasajero> pasajeros;
