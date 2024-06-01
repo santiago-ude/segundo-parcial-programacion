@@ -10,6 +10,10 @@ public class Reserva {
 
     public Reserva(Pasajero pasajero, Vuelo vuelo, String claseAsiento) {
 
+        if(pasajero == null || vuelo == null || claseAsiento == null){
+            throw new IllegalArgumentException("El pasajero, el vuelo y la clase no puede ser un elemento nulo");
+        }
+
         this.pasajero = pasajero;
         this.vuelo = vuelo;
         this.claseAsiento = claseAsiento;
