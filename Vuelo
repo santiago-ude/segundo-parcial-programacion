@@ -1,7 +1,7 @@
 import java.time.*;
 
 
-public class Vuelo {
+public class Vuelo implements Comparable<Vuelo>{
 
     private final Double id;
     private double autoid = 1;
@@ -54,6 +54,11 @@ public class Vuelo {
 
     public Double getId() {
         return id;
+    }
+
+    @Override
+    public int compareTo(Vuelo otro) {
+        return Double.compare(this.id, otro.id);
     }
 
     @Override
