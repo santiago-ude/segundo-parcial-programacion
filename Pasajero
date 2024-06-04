@@ -1,18 +1,4 @@
-import java.util.Comparator;
-import java.util.Objects;
 
-public class Pasajero implements Comparable<Pasajero>{
-
-    private String nombreCompleto;
-    private double nroPasaporte;
-
-    public Pasajero(String nombreCompleto, double nroPasaporte) {
-        this.nombreCompleto = nombreCompleto;
-        this.nroPasaporte = nroPasaporte;
-    }
-
-    public String getNombreCompleto() {
-        return nombreCompleto;
     }
 
     public void setNombreCompleto(String nombreCompleto) {
