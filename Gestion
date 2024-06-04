@@ -1,28 +1,33 @@
 import com.sun.source.tree.Tree;
-asdasd
+
+import java.util.Comparator;
 import java.util.NoSuchElementException;
 import java.util.TreeSet;
 
 public class Gestion<T>{
 
-    private TreeSet<T> collection;
+    private TreeSet<T> listElementos;
 
+
+    //CONSTRUCTOR
     public Gestion() {
-        this.collection = new TreeSet<>();
+        this.listElementos = new TreeSet<>();
     }
 
+
+    //AGREGAR ELEMENTO AL TREESET
     public void agregar(T elemento){
 
-        if(!collection.add(elemento)){
+        if(!listElementos.add(elemento)){
 
             throw new IllegalArgumentException("El elemento ya existe");
         }
     }
 
-
+    //ELIMINAR ELEMENTO
     public void eliminar(T elemento){
 
-        if(collection.remove(elemento)){
+        if(!listElementos.remove(elemento)){
 
             throw new NoSuchElementException("Ese elemento no existe");
 
@@ -31,7 +36,7 @@ public class Gestion<T>{
 
     public T buscar(T elemento){
 
-        for (T t : collection) {
+        for (T t : listElementos) {
             if(t.equals(elemento)){
 
                 return t;
@@ -42,10 +47,13 @@ public class Gestion<T>{
     }
 
 
-    public TreeSet<T> getCollection(){
+    public TreeSet<T> getListaElementos(){
 
-        return collection;
+        return listElementos;
     }
+
+
+
 
 
 }
