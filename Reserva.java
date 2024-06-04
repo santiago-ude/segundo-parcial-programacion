@@ -1,18 +1,16 @@
+import java.nio.channels.ClosedSelectorException;
 
+public class Reserva implements Comparable<Reserva>{
 
-//reserva de aviones
-
-public class Reserva {
-
-    private final Double id;
-    private double autoid = 1;
+    private final int id;
+    private static int autoid = 1;
 
     private Pasajero pasajero;
     private Vuelo vuelo;
-    private String claseAsiento; // enum(economica, negocios, primera)
+    private ClaseAsiento claseAsiento; // enum(economica, negocios, primera)
 
 
-    public Reserva(Pasajero pasajero, Vuelo vuelo, String claseAsiento) {
+    public Reserva(Pasajero pasajero, Vuelo vuelo, ClaseAsiento claseAsiento) {
 
         if(pasajero == null || vuelo == null || claseAsiento == null){
             throw new IllegalArgumentException("El pasajero, el vuelo y la clase no puede ser un elemento nulo");
@@ -41,20 +39,26 @@ public class Reserva {
         this.vuelo = vuelo;
     }
 
-    public String getClaseAsiento() {
+    public ClaseAsiento getClaseAsiento() {
         return claseAsiento;
     }
 
-    public void setClaseAsiento(String claseAsiento) {
+    public void setClaseAsiento(ClaseAsiento claseAsiento) {
         this.claseAsiento = claseAsiento;
     }
 
-    public Double getId() {
+    public int getId() {
         return id;
     }
 
     @Override
+    public int compareTo(Reserva otraReserva) {
+        return Integer.compare(this.id, otraReserva.id);
+    }
+
+
+    @Override
     public String toString() {
-        return String.format("ID Reserva: %d || Clase: %s\nPASAJERO: %s\nVUELO:%s",this.id,this.claseAsiento,this.pasajero.toString(),this.vuelo.toString());
+        return String.format("\nID Reserva: %d || Clase: %s\nPASAJERO: " + this.pasajero.toString() +  "\nVUELO: " + this.vuelo.toString() ,this.id,this.claseAsiento);
     }
 }
