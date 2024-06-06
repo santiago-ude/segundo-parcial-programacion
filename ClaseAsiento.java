@@ -5,3 +5,4 @@ public enum ClaseAsiento {
     NEGOCIOS,
     PRIMERA
 }
+//ENUM DE LAS 3 CLASES DE ASIENTOS 
