@@ -4,3 +4,5 @@ public enum TipoVuelo {
     NACIONAL
 
 }
+
+//ENUMERACION PARA EL TIPO DE VUELO
