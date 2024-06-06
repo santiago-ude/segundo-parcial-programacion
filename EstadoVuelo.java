@@ -5,3 +5,5 @@ public enum EstadoVuelo {
     CANCELADO,
     DESPEGADO
 }
+
+//ENUM DE LOS 4 ESTADOS DE VUELO
