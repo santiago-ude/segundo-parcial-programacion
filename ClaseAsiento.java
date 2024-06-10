@@ -6,3 +6,5 @@ public enum ClaseAsiento {
     PRIMERA
 }
 //ENUM DE LAS 3 CLASES DE ASIENTOS 
+
+pasdjfkdsjfkl
