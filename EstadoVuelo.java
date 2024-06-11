@@ -7,3 +7,4 @@ public enum EstadoVuelo {
 }
 
 //ENUM DE LOS 4 ESTADOS DE VUELO
+//JFSDIAFJSDKJF
