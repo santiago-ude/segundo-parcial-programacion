@@ -7,3 +7,4 @@ public enum ClaseAsiento {
 }
 //ENUM DE LAS 3 CLASES DE ASIENTOS 
 
+//JFSDIAFJSDKJF
